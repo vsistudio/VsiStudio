@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VSI Studio | Official Website</title>
+
+<meta name="description" content="Official website of VSI Studio - Founded by Vivan Sahu and Daksh Sachar. Creator of BeastVerse and future gaming experiences.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.80),rgba(0,0,0,.80)),
+url("pngtree-abstract-black-and-gold-tech-background-premium-image_16161431.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+
+font-family:'Poppins',sans-serif;
+color:white;
+
+}
+
+body::-webkit-scrollbar{
+width:10px;
+}
+
+body::-webkit-scrollbar-thumb{
+background:#d4af37;
+border-radius:20px;
+}
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(212,175,55,.30);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-family:'Cinzel',serif;
+
+font-size:32px;
+
+font-weight:800;
+
+letter-spacing:2px;
+
+color:#ffd66e;
+
+text-shadow:
+
+0 0 12px gold,
+
+0 0 25px #b8860b;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:38px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#ffd66e;
+
+text-shadow:0 0 12px gold;
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:120px 8% 80px;
+
+text-align:center;
+
+}
+
+.hero-box{
+
+max-width:950px;
+
+padding:60px;
+
+border-radius:35px;
+
+background:rgba(15,15,15,.55);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(212,175,55,.30);
+
+box-shadow:
+
+0 0 40px rgba(0,0,0,.5),
+
+0 0 25px rgba(212,175,55,.15);
+
+animation:fadeIn 1.5s ease;
+
+}
+
+.hero h1{
+
+font-family:'Cinzel',serif;
+
+font-size:70px;
+
+color:#ffd66e;
+
+letter-spacing:4px;
+
+margin-bottom:18px;
+
+text-shadow:
+
+0 0 18px gold,
+
+0 0 35px #b8860b;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+font-weight:300;
+
+margin-bottom:30px;
+
+color:#fff;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+line-height:1.9;
+
+color:#ddd;
+
+margin-bottom:45px;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:18px 42px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+.gold{
+
+background:linear-gradient(45deg,#b8860b,#ffd66e,#cfa11f);
+
+color:black;
+
+box-shadow:0 0 20px gold;
+
+}
+
+.gold:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 35px gold;
+
+}
+
+.outline{
+
+border:2px solid gold;
+
+color:white;
+
+}
+
+.outline:hover{
+
+background:gold;
+
+color:black;
+
+}
+
+section{
+
+padding:90px 9%;
+
+}
+
+.card{
+
+background:rgba(20,20,20,.55);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+padding:55px;
+
+border:1px solid rgba(212,175,55,.25);
+
+box-shadow:0 0 30px rgba(212,175,55,.12);
+
+margin-bottom:60px;
+
+}
+
+.card h2{
+
+font-family:'Cinzel',serif;
+
+font-size:44px;
+
+color:#ffd66e;
+
+margin-bottom:25px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:2;
+
+color:#ececec;
+
+}
+
+.highlight{
+
+color:#ffd66e;
+
+font-weight:700;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:40px;
+
+}
+
+.info{
+
+background:rgba(0,0,0,.35);
+
+padding:35px;
+
+border-radius:22px;
+
+border:1px solid rgba(212,175,55,.20);
+
+transition:.35s;
+
+}
+
+.info:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px rgba(212,175,55,.25);
+
+}
+
+.info h3{
+
+font-family:'Cinzel',serif;
+
+font-size:28px;
+
+color:#ffd66e;
+
+margin-bottom:15px;
+
+}
+
+.info p{
+
+line-height:1.9;
+
+color:#ddd;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero-box{
+
+padding:35px;
+
+}
+
+nav{
+
+padding:18px 6%;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.card{
+
+padding:35px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+VSI STUDIO
+
+</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#founders">Founders</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h1>VSI STUDIO</h1>
+
+<h2>Dream. Create. Inspire.</h2>
+
+<p>
+
+Welcome to <span class="highlight">VSI Studio</span>, an independent creative studio founded by <span class="highlight">Vivan Sahu</span> and <span class="highlight">Daksh Sachar</span>. Our vision is to build premium games, books, digital experiences, and innovative entertainment that leave a lasting impact. Every project reflects our passion for creativity, storytelling, and technology.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn gold"
+href="#projects">
+
+Explore Projects
+
+</a>
+
+<a class="btn outline"
+href="#about">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="card">
+
+<h2>About VSI Studio</h2>
+
+<p>
+
+VSI Studio is a young and ambitious creative studio driven by imagination, dedication, and innovation. Founded by <span class="highlight">Vivan Sahu</span> and <span class="highlight">Daksh Sachar</span>, our mission is to create experiences that entertain, inspire, and connect people around the world.
+
+<br><br>
+
+From immersive storytelling to interactive games and future digital platforms, every project is built with attention to detail and a commitment to quality. We believe that age is never a limitation when passion, curiosity, and determination come together.
+
+<br><br>
+
+VSI Studio represents the beginning of a long creative journey, with the goal of delivering premium experiences that continue to grow in quality, scale, and imagination for years to come.
+
+</p>
+
+</div>
+</section>
+
+<section id="founders">
+
+<div class="card">
+
+<h2>Our Founders</h2>
+
+<div class="grid">
+
+<div class="info">
+
+<h3>Vivan Sahu</h3>
+
+<p>
+
+Co-Founder of <span class="highlight">VSI Studio</span> and the creator of <span class="highlight">BeastVerse</span>. Passionate about storytelling, game development, world-building, and creating unforgettable adventures that inspire creativity and imagination.
+
+</p>
+
+</div>
+
+<div class="info">
+
+<h3>Daksh Sachar</h3>
+
+<p>
+
+Co-Founder of <span class="highlight">VSI Studio</span>. Dedicated to helping shape the studio's future through innovation, teamwork, and ambitious ideas that aim to transform creative visions into reality.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="card">
+
+<h2>Featured Project</h2>
+
+<div class="grid">
+
+<div class="info">
+
+<h3>📖 BeastVerse</h3>
+
+<p>
+
+Our first published title, <span class="highlight">BeastVerse</span>, introduces readers to a thrilling universe filled with mystery, powerful characters, dangerous beasts, and epic adventures. It marks the beginning of an expanding world created by VSI Studio.
+
+</p>
+
+<br>
+
+<a class="btn gold"
+
+href="https://play.google.com/store/books/details/Vivan_Sahu_BeastVerse_Part_I?id=uh3rEQAAQBAJ"
+
+target="_blank">
+
+Read BeastVerse
+
+</a>
+
+</div>
+
+<div class="info">
+
+<h3>🎮 Future Games</h3>
+
+<p>
+
+VSI Studio is actively working toward creating premium-quality games and interactive experiences. Our goal is to combine storytelling, innovation, and immersive gameplay into projects enjoyed by players worldwide.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="card">
+
+<h2>Join Our Journey</h2>
+
+<p>
+
+Every great adventure begins with a single step. VSI Studio is only at the beginning of its journey, and we invite you to become part of our growing community. Follow our latest updates, future projects, and exciting announcements through our official YouTube channel.
+
+</p>
+
+<br><br>
+
+<div class="buttons">
+
+<a class="btn gold"
+
+href="https://youtube.com/@vsistudio?si=1ivB66xh7oqq3_HK"
+
+target="_blank">
+
+Visit YouTube
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 VSI Studio • All Rights Reserved
+
+</p>
+
+<p>
+
+Designed with Passion • Built for the Future
+
+</p>
+
+</footer>
+
+<style>
+
+footer{
+
+text-align:center;
+
+padding:60px 20px;
+
+background:rgba(0,0,0,.65);
+
+border-top:1px solid rgba(212,175,55,.30);
+
+}
+
+footer p{
+
+color:#d8d8d8;
+
+margin:10px 0;
+
+letter-spacing:1px;
+
+}
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+</style>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.classList.add("reveal");
+
+});
+
+function reveal(){
+
+const reveals=document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+const windowHeight=window.innerHeight;
+
+const revealTop=reveals[i].getBoundingClientRect().top;
+
+const revealPoint=120;
+
+if(revealTop<windowHeight-revealPoint){
+
+reveals[i].classList.add("active");
+
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+reveal();
+
+const nav=document.querySelector("nav");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>40){
+
+nav.style.background="rgba(0,0,0,.82)";
+
+}else{
+
+nav.style.background="rgba(0,0,0,.35)";
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
